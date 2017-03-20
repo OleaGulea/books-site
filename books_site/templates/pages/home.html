@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block home %}
+    {% for book in books %}
+    <div class="container mt-3">
+        <div class="row book-frame p-2">
+            <div class="col-2 book-image text-center"><img src='{{ book.cover.url }}' width="150"></div>
+            <div class="col-6 book-description">{{ book.description }}</div>
+            <div class="col-4 buttons-area">
+                <button class="button btn btn-info btn-block">Read</button>
+                <button class="button btn btn-info btn-block">Download</button>
+                <button class="button btn btn-outline-danger btn-block">Buy</button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

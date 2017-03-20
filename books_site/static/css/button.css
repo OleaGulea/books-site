@@ -1,0 +1,9 @@
+.buttons-area{
+  padding-top: 3%;
+}
+
+.buttons-area button{
+  margin: auto;
+  width: 50%;
+  /*background-color: #2C3E50;*/
+}
