@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block book_editor %}
+
+    <div class="mt-5">
+        {% for book_chapter in book.chapters.all %}
+            <div class="col-3 mx-auto book-frame p-2">
+                <a href="/editor/{{ book.id }}/{{ book_chapter.id }}" class="button btn btn-block">
+                    {% autoescape off %}{{ book_chapter.title }}{% endautoescape %}
+                </a>
+            </div>
+        {% endfor %}
+        <div class="col-3 mx-auto p-3 mt-3">
+            <a href="/editor/{{ book.id }}/new_chapter/" class="button btn btn-block btn-info new-chapter">
+                New Chapter
+            </a>
+        </div>
+    </div>
+{% endblock book_editor %}

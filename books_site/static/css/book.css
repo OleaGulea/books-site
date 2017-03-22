@@ -8,8 +8,17 @@
 
 .book-image, .book-description{
   padding: 10px;
+  vertical-align: middle;
 }
 
 body{
   background-color: #E5E7EA;
+}
+
+.editor{
+  display: inline-block;
+}
+
+.editor img{
+  height: 200px;
 }

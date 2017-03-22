@@ -248,7 +248,9 @@ LOGIN_URL = 'account_login'
 AUTOSLUG_SLUGIFY_FUNCTION = 'slugify.slugify'
 # django-compressor
 # ------------------------------------------------------------------------------
-INSTALLED_APPS += ("compressor", )
+INSTALLED_APPS += ("compressor",
+                   "ckeditor",
+                   "jquery", )
 STATICFILES_FINDERS += ("compressor.finders.CompressorFinder", )
 
 # Location of root django.contrib.admin URL, use {% url 'admin:index' %}
@@ -256,3 +258,13 @@ ADMIN_URL = r'^admin/'
 
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
+CKEDITOR_CONFIGS = {
+    'awesome_ckeditor': {
+        'toolbar': 'Basic',
+    },
+    'default': {
+        'toolbar': 'full',
+        'enterMode': 2,
+        # 'language': 'ru'
+    },
+}

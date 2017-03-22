@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block editor %}
+    {% for book in books %}
+        <div class="book-frame editor p-2 m-1">
+            <div class="book-image text-center">
+                <img src='{{ book.cover.url }}' width="150">
+                <a href="/editor/{{ book.id }}" class="button btn btn-info mt-2 btn-block">Edit</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock editor %}

@@ -29,5 +29,8 @@ class Chapter(models.Model):
     def __str__(self):
         return '%s %s %s' % (self.book.title, self.order, self.title)
 
+    class Meta:
+        ordering = ["order"]
+
 
 
